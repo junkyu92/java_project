@@ -1,0 +1,73 @@
+1. SQL은 무엇의 약자인가?
+- Structured Query Language
+
+2. SQL을 세가지로 구분해보세요.
+- DDL, 테이블과 같은 구조정의에 사용되는 명령어
+  DML, 데이터를 조작하는 언어 (CRUD)
+  DCL, 데이터베이스 접근, 데이터 사용 권한 관련 언어
+
+3. mySQL, oracle과 같은 dbms는 어떤 db인가?
+- 관계형 db, entity간의 관계성을 따져서 저장한다.
+
+4. 데이터가 저장될 프레임에 해당하는 단어는?
+- 스키마
+
+5. 스키마 정의라고 했을 때, 어떤 것들을 정의하게 되는가?
+- 스키마 == DB, 테이블, 테이블명, 항목명, 제약조건 
+
+6. 테이블의 속성을 무엇이라고 하는가?
+- 컬럼(열), 항목(item, field)
+<--> row(행), record, instance
+
+7. 테이블의 행을 무엇이라고 하는가?
+- record, 정의된 스키마에 넣는 실제데이터(instance)
+
+8. dbms의 저장할 대상을 부르는 말은?
+- 개체
+
+9. jdbc4단계는?
+- 1.커넥터설정, 2.DB연결, 3.sql문작성, 4.sql문 전송
+
+10. String sql = "select * from member";라고 하면 자바는 이것을 sql문으로 
+    인식하지 못한다. 왜인가?
+- 자바에서 사용하는 언어와 다르기때문에 PreparedStatement를 이용해야 한다.
+
+11. db연결시 필요한 데이터는? url과 또 무엇인가? 2가지
+- username, password
+
+12. db연결시 url에는 어떤 데이터가 필요한가? 3가지
+- ip, port, DB명
+
+13. ip: localhost, port: 3306, db명: friday인 경우 jdbc url을 작성하시오.
+- jdbc:mysql://localhost:3306/friday
+
+14. 자바와 db연동시 작성하는 sql문은 ddl, dml, dcl중에 어떤 것인가?
+- dml
+
+15. 스키마작성시 컬럼에 대한 속성에 제약을 주는 것을 무엇이라고 하는가?
+- 제약조건(Constraints)
+
+16. pk는 무엇의 약자이고, 어떤 역할을 하는가?
+- primary key, 하나의 컬럼에 중복된 값이 입력되지 않게 해준다. 
+
+17. mysql에서 문자열 100글자 이내와 정수를 나태는 타입은?
+- varchar(100), int
+
+18. varchar(100)과 char(100)의 차이는? 주민번호인경우 어떤 것이 적합한가?
+- varchar는 가변적이고 char은 길이가 고정되어있다. 주민번호의 경우 varchar를 쓰거나 char(13)을 쓴다.
+
+19. member테이블에서 id가 100인 전화번호를 000으로 변경하려고 한다. sql문을 작성하시오.
+- update member set tel = '000' where id = '100';
+
+20. 다음을 호출하는 예제를 만드시오.
+    1) public void call1(String name){
+            System.out.println(name + "님 환영합니다.");
+       }
+       public String call2(String name, int age){
+            return name + "님의 나이는 " + age + "입니다.";
+       }
+
+
+       db.call1(name);
+       String result = db.call2(name, age);
+       
