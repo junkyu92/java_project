@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
+  <!-- iamport.payment.js -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<script>
+let IMP = window.IMP; // <- 생략해도 무방함. 
+IMP.init("iamport"); 
+IMP.certification(
+		  function (rsp) { 
+		  	//인증 성공시
+		    if (rsp.success) { 
+		      // jQuery로 본인 웹서버로 요청
+		     alert("인증에 성하였습니다");
+		    }else{
+		      alert("인증에 실패하였습니다. 에러 내용: " +  rsp.error_msg);
+		    }
+		  });
+		  
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

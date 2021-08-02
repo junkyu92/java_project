@@ -1,0 +1,52 @@
+@charset "UTF-8";
+#logo{
+	font-size: 30px;
+	color: black;
+	text-decoration: none;
+}
+
+.menu{
+	list-style: none;
+	float: left;
+	font-size: 24px;
+	padding: 10px;
+	
+}
+#menu_frame{
+	width: 1200px;
+	height: 100px;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #7D5A38;
+}
+hr{
+	width: 1200px;
+	height: 1px;
+	background:#2D4136;
+	margin:0;
+	
+}
+#main_frame{
+	margin: 20px 20px 20px 0;
+
+}
+#notice_frame{
+	font-size: 12px;
+	margin: 30px 20px 20px 100px;
+	white-space: nowrap;
+}
+#my_trip{
+	float: left;
+}
+.my_trip_button{
+	list-style: none;
+	font-size: 20px;
+	padding: 10px;
+}
+#updown {
+    border-left: 1px solid black;
+ 	height: 500px;
+ 	float: left;
+    }
