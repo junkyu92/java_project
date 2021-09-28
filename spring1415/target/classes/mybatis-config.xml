@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+   <typeAliases>
+      <typeAlias type="com.mega.mvc14.MemberDTO" alias="memberDTO"></typeAlias>
+      <typeAlias type="com.mega.mvc14.BbsDTO" alias="bbsDTO"></typeAlias>
+      <typeAlias type="com.mega.mvc14.PayDTO" alias="payDTO"></typeAlias>
+      <typeAlias type="com.mega.mvc14.ReplyDTO" alias="replyDTO"></typeAlias>
+   </typeAliases>
+   <mappers>
+      <mapper resource="mapper/memberMapper.xml" />
+      <mapper resource="mapper/bbsMapper.xml" />
+      <mapper resource="mapper/payMapper.xml" />
+      <mapper resource="mapper/replyMapper.xml" />
+   </mappers>
+</configuration>
