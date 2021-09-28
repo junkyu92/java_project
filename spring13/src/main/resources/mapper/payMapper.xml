@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pay">
+	<insert id="insert" parameterType="payDTO">
+		insert into pay values (#{payid},#{memid},#{pay_data},#{pay_datetime},#{pay_total})
+	</insert>
+	<select id="one" parameterType="payDTO" resultType="payDTO">
+		select * from pay where payid = #{payid}
+	</select>
+</mapper>
