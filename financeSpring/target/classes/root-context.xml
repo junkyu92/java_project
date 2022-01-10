@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:property-placeholder location="classpath:db.properties"/>
+<bean id="dbcp" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="${db.driver}"></property>
+	<property name="url" value="${db.url}"></property>
+	<property name="username" value="${db.user}"></property>
+	<property name="password" value="${db.pass}"></property>
+</bean>
+<bean id="config" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+	<property name="dataSource" ref="dbcp"></property>
+</bean>
+<!-- mybatis -->
+<!-- SqlSessionTemplate mybatis = new SqlSessionTemplate(); -->
+<bean id="mybatis" class="org.mybatis.spring.SqlSessionTemplate">
+	<!-- 객체 생성시 파라메터 있는 생성자를 호출하는 경우, constructor태그를 넣어준다 -->
+	<constructor-arg ref="config"></constructor-arg>
+</bean>
+
+</beans>
